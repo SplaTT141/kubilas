@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: DM Serif Text, serif;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(182, 188, 190);
+    align-items: center;
+    text-align: center;
+    padding-top: 2em;
+}
+
+.content {
+    display: inline;
+    width: 80%;
+}
+
+.main img {
+    width: 100%;
+    border-radius: 1%;
+}
+
+.text {
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    justify-content: space-between;
+    color: white;
+}
+
+.text p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: 10px;
+}
+
+@media (max-width:770px) {
+    .text {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5em;
+        margin: 0;
+    }
+}
+
+@media (max-width:450px) {
+    .text {
+        font-size: 1em;
+    }
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(227, 214, 231);
+    padding-bottom: 70px;
+}
+
+.about img {
+    width: 440px;
+    margin-left: 20px;
+}
+
+.about-content {
+    display: flex;
+    width: 80%;
+    align-items: center;
+    text-align: center;
+}
+
+.about-content h1,
+h2 {
+    margin-top: 20px;
+}
+
+@media (max-width:770px) {
+    .about-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-content img {
+        padding: 1rem;
+        width: 80%;
+        margin: 0;
+    }
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    justify-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.gallery-content img {
+    width: 100%;
+    cursor: zoom-in;
+}
+
+.gallery-content img:hover {
+    transform: scale(1.6);
+    transition: transform .5s
+}
+
+@media (max-width:770px) {
+    .gallery-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:426px) {
+    .gallery-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.ending {
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(219, 223, 230);
+    text-align: center;
+}
+
+.ending>div>p {
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+.communication {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 160px;
+}
+
+.number {
+    display: inline-block;
+    text-decoration: underline;
+    font-size: 2.7rem;
+    font-weight: bold;
+    margin-bottom: 145px;
+    margin-top: 50px;
+}
+
+.input {
+    display: block;
+}
+
+input {
+    width: 400px;
+    height: 40px;
+    float: left;
+    border-width: 0;
+}
+
+button {
+    width: 85px;
+    height: 40px;
+    float: left;
+    border-radius: 10%;
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+    border-style: none;
+    margin-top: 20px;
+}
+
+label {
+    float: left;
+    margin-top: 15px;
+}
+
+@media (max-width:900px) {
+    .communication {
+        flex-direction: column;
+    }
+
+    input {
+        width: 100%;
+    }
+
+}
+
+@media (max-width:330px) {
+    .ending>div>p {
+        font-size: 30px;
+    }
+
+    .number {
+        font-size: 30px;
+    }
+}
+
+.nav-bar {
+    display: FLEX;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list a {
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 13px;
+    text-decoration: none;
+    color: black
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.nav-btn {
+    display: none;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+@media (max-width:900px) {
+
+    .nav-list {
+        display: none;
+        box-shadow: 0 0 3px;
+        text-align: center;
+        width: 85px;
+    }
+
+    .nav-list>a {
+        display: block;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        margin: 0;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+    }
+
+    .nav-btn {
+        display: block;
+    }
+
+    .nav-drop:hover .nav-list {
+        display: block;
+        position: absolute;
+        margin-top: 3rem;
+        background-color: white;
+    }
+}
+
+.pricing {
+    display: inline-block;
+    background-color: rgb(227, 214, 231);
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+.pricing h1 {
+    text-align: center;
+    font-size: 3.2rem;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.pricing p {
+    text-align: center;
+    margin-bottom: 10px;
+}
